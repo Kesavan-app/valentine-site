@@ -6,8 +6,7 @@ function handleYesClick() {
     window.location.href = "yes.html";
 }
 
-// Make the No button dodge when hovered
-noButton.addEventListener("mouseenter", () => {
+function moveNoButton() {
     const container = document.querySelector(".container");
     const containerRect = container.getBoundingClientRect();
 
@@ -19,4 +18,13 @@ noButton.addEventListener("mouseenter", () => {
 
     const randomScale = 1 + Math.random() * 0.5;
     noButton.style.transform = `translate(${randomX}px, ${randomY}px) scale(${randomScale})`;
+}
+
+// Mouse hover (desktop)
+noButton.addEventListener("mouseenter", moveNoButton);
+
+// Touch (mobile)
+noButton.addEventListener("touchstart", (e) => {
+    e.preventDefault(); // Avoid triggering click after touch
+    moveNoButton();
 });
