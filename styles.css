@@ -1,0 +1,80 @@
+/* -----------------------------
+   Yes Page Styles
+   ----------------------------- */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #ffe6e6; /* same soft pink as index page */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  max-width: 400px;
+  position: relative;
+}
+
+.header_text {
+  font-size: 2rem;
+  color: #e60050; /* same red as index page */
+  margin-bottom: 20px;
+  transition: 0.5s;
+  animation: pop 0.5s ease-in-out;
+}
+
+.gif_container img {
+  width: 200px; /* matches the index page GIF size */
+  border-radius: 10px;
+  animation: bounce 1s infinite alternate;
+}
+
+/* Buttons styling */
+button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.yes-button {
+  background: #ff0066;
+  color: white;
+}
+
+.no-button {
+  background: #ccc;
+  color: #333;
+}
+
+/* Animations for fun effect */
+@keyframes pop {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-15px); }
+}
+
+/* Hover effect on GIF for extra playfulness */
+.gif_container img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
